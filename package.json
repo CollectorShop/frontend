@@ -1,10 +1,24 @@
 {
-  "name": "frontend-collector",
+  "name": "frontend",
   "version": "0.0.0",
-  "private": true,
+  "description": "Frontend pour CollectorShop - DevSecOps avec SonarCloud",
+  "private": false,
+  "license": "MIT",
   "type": "module",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
+  },
+  "author": {
+    "name": "collectorshop",
+    "url": "https://github.com/CollectorShop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CollectorShop/frontend"
+  },
+  "bugs": {
+    "url": "https://github.com/CollectorShop/frontend/issues",
+    "email": "angel.pastorrojas+support@viacesi.fr"
   },
   "scripts": {
     "dev": "vite",

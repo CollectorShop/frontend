@@ -1,12 +1,67 @@
-# frontend-collector
+# 🚀 Frontend Collector - Startup MVP
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-This template should help get you started developing with Vue 3 in Vite.
+**Vue 3 + Vite + Bootstrap 5 + Pinia** - Application frontend pour collectorshop startup avec DevSecOps SonarCloud.
 
-## Recommended IDE Setup
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 📋 Développement testé sur windows
+| Outil | Version |
+|-------|---------|
+| **Node.js** | `24.12.0` |
+| **npm** | `11.6.2` |
+| **IDE** | VS Code |
 
-## Recommended Browser Setup
+## 🚀 Démarrage rapide (Windows + Node 24 recommandé)
+
+### Installation du projet
+```bash
+# Clone + installation (Node >=24.12.0 requis)
+git clone https://github.com/CollectorShop/frontend.git
+cd frontend
+npm install
+```
+
+### Développement (Hot-Reload)
+```bash
+npm run dev
+# → http://localhost:5173
+```
+
+### Production
+```bash
+npm run build
+```
+
+### Tests unitaires ([Vitest](https://vitest.dev/))
+```bash
+npm run test:unit
+```
+
+### Lint ([ESLint](https://eslint.org/))
+```bash
+npm run lint
+```
+
+### Prévisualisation build
+```bash
+npm run preview
+```
+
+### Formatage (Prettier)
+```bash
+npm run format
+```
+
+## Commandes utiles
+### Lister les paquets npm globaux
+```bash
+npm list -g --depth=0 
+```
+
+## 🔧 Configuration IDE recommandée
+[VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+
+## 🌐 Configuration navigateur recommandée
 
 - Chromium-based browsers (Chrome, Edge, Brave, etc.):
   - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
@@ -15,40 +70,10 @@ This template should help get you started developing with Vue 3 in Vite.
   - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
   - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
 
-## Type Support for `.vue` Imports in TS
+## 🔤 Support TypeScript pour les imports `.vue`
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+TypeScript ne gère pas nativement les types des fichiers `.vue` . Nous utilisons `vue-tsc` pour le typage et [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)  dans l'éditeur.
 
-## Customize configuration
+## ⚙️ Configuration personnalisée
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Consultez la [réference Vite](https://vite.dev/config/).

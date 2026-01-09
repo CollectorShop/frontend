@@ -1,5 +1,19 @@
 # 🚀 Frontend Collector - Startup MVP
-[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[summary]: https://sonarcloud.io/summary/new_code?id=CollectorShop_frontend
+[icon-license]: https://img.shields.io/badge/license-MIT-green.svg
+
+[![MIT License][icon-license]](LICENSE)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=CollectorShop_frontend&metric=alert_status)][summary]
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=CollectorShop_frontend&metric=bugs)][summary]
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=CollectorShop_frontend&metric=code_smells)][summary]
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=CollectorShop_frontend&metric=coverage)][summary]
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=CollectorShop_frontend&metric=coverage)][summary]
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=CollectorShop_frontend&metric=ncloc)][summary]
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=CollectorShop_frontend&metric=reliability_rating)][summary]
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=CollectorShop_frontend&metric=security_rating)][summary]
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=CollectorShop_frontend&metric=sqale_index)][summary]
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=CollectorShop_frontend&metric=sqale_rating)][summary]
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=CollectorShop_frontend&metric=vulnerabilities)][summary]
 
 **Vue 3 + Vite + Bootstrap 5 + Pinia** - Application frontend pour collectorshop startup avec DevSecOps SonarCloud.
 
@@ -10,6 +24,8 @@
 | **Node.js** | `24.12.0` |
 | **npm** | `11.6.2` |
 | **IDE** | VS Code |
+
+En savoir plus : [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## 🚀 Démarrage rapide (Windows + Node 24 recommandé)
 

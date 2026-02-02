@@ -1,11 +1,25 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// Global composables
+import { RouterView } from 'vue-router';
+import Navbar from '@/components/common/Navbar.vue';
+import Footer from '@/components/common/Footer.vue';
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div id="app" class="d-flex flex-column min-vh-100">
+    <!-- Navbar persistante -->
+    <Navbar />
+    
+    <!-- Contenu principal -->
+    <main class="flex-grow-1">
+      <RouterView />
+    </main>
+    
+    <!-- Footer -->
+    <Footer />
+  </div>
 </template>
 
-<style scoped></style>
+<style>
+@import '@/assets/css/main.css';
+</style>

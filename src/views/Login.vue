@@ -1,24 +1,24 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
-import { useUserStore } from '@/stores/user';
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { useUserStore } from '@/stores/user'
 
-const router = useRouter();
-const userStore = useUserStore();
+const router = useRouter()
+const userStore = useUserStore()
 
-const email = ref('');
-const password = ref('');
-const rememberMe = ref(false);
+const email = ref('')
+const password = ref('')
+const rememberMe = ref(false)
 
 const handleLogin = async () => {
-  const success = await userStore.login(email.value, password.value);
+  const success = await userStore.login(email.value, password.value)
   if (success) {
-    router.push('/');
+    router.push('/')
   }
-};
+}
 
 // Test credentials
-const testCreds = { email: 'test@collector.shop', password: 'password123' };
+const testCreds = { email: 'test@collector.shop', password: 'password123' }
 </script>
 
 <template>
@@ -32,16 +32,12 @@ const testCreds = { email: 'test@collector.shop', password: 'password123' };
                 <i class="bi bi-gem display-4 text-primary"></i>
               </router-link>
               <h2 class="h3 fw-bold mb-1">Connexion</h2>
-              <p class="text-muted mb-0">
-                Accédez à votre compte Collector.shop
-              </p>
+              <p class="text-muted mb-0">Accédez à votre compte Collector.shop</p>
             </div>
 
             <!-- Test credentials -->
             <div class="alert alert-info border-0 mb-4">
-              <small>
-                <strong>Test :</strong> test@collector.shop / password123
-              </small>
+              <small> <strong>Test :</strong> test@collector.shop / password123 </small>
             </div>
 
             <form @submit.prevent="handleLogin" novalidate>
@@ -94,26 +90,19 @@ const testCreds = { email: 'test@collector.shop', password: 'password123' };
                   class="form-check-input"
                   type="checkbox"
                 />
-                <label for="remember" class="form-check-label">
-                  Se souvenir de moi
-                </label>
+                <label for="remember" class="form-check-label"> Se souvenir de moi </label>
               </div>
 
               <!-- Buttons -->
               <div class="d-grid gap-2">
-                <button
-                  type="submit"
-                  class="btn btn-primary btn-lg"
-                  :disabled="userStore.loading"
-                >
-                  <span v-if="userStore.loading" class="spinner-border spinner-border-sm me-2"></span>
+                <button type="submit" class="btn btn-primary btn-lg" :disabled="userStore.loading">
+                  <span
+                    v-if="userStore.loading"
+                    class="spinner-border spinner-border-sm me-2"
+                  ></span>
                   {{ userStore.loading ? 'Connexion...' : 'Se connecter' }}
                 </button>
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary"
-                  @click="router.push('/')"
-                >
+                <button type="button" class="btn btn-outline-secondary" @click="router.push('/')">
                   Retour au catalogue
                 </button>
               </div>
@@ -121,7 +110,7 @@ const testCreds = { email: 'test@collector.shop', password: 'password123' };
 
             <div class="text-center mt-4">
               <p class="mb-0">
-                Pas de compte ? 
+                Pas de compte ?
                 <router-link to="/register" class="text-primary fw-semibold">
                   S'inscrire
                 </router-link>

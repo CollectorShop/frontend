@@ -13,8 +13,7 @@
             Collector.shop
           </h5>
           <p class="text-light-50">
-            La marketplace dédiée aux objets de collection vintage 
-            entre particuliers passionnés.
+            La marketplace dédiée aux objets de collection vintage entre particuliers passionnés.
           </p>
           <div class="d-flex gap-2">
             <a href="#" class="text-light"><i class="bi bi-facebook fs-5"></i></a>
@@ -55,16 +54,14 @@
         </div>
       </div>
 
-      <hr class="my-4">
+      <hr class="my-4" />
 
       <div class="row align-items-center">
         <div class="col-md-6">
           <small>&copy; 2026 Collector.shop. Tous droits réservés.</small>
         </div>
         <div class="col-md-6 text-md-end">
-          <small>
-            Hébergé en France • <a href="#" class="text-light-50">RGPD</a>
-          </small>
+          <small> Hébergé en France • <a href="#" class="text-light-50">RGPD</a> </small>
         </div>
       </div>
     </div>

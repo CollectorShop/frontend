@@ -1,34 +1,30 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
-import { useUserStore } from '@/stores/user';
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { useUserStore } from '@/stores/user'
 
-const router = useRouter();
-const userStore = useUserStore();
+const router = useRouter()
+const userStore = useUserStore()
 
 const form = ref({
   name: '',
   email: '',
   password: '',
-  confirmPassword: ''
-});
+  confirmPassword: '',
+})
 
 const handleRegister = async () => {
   if (form.value.password !== form.value.confirmPassword) {
-    userStore.error = 'Les mots de passe ne correspondent pas';
-    return;
+    userStore.error = 'Les mots de passe ne correspondent pas'
+    return
   }
-  
-  const success = await userStore.register(
-    form.value.email, 
-    form.value.password, 
-    form.value.name
-  );
-  
+
+  const success = await userStore.register(form.value.email, form.value.password, form.value.name)
+
   if (success) {
-    router.push('/');
+    router.push('/')
   }
-};
+}
 </script>
 
 <template>
@@ -42,9 +38,7 @@ const handleRegister = async () => {
                 <i class="bi bi-gem display-4 text-primary"></i>
               </router-link>
               <h2 class="h3 fw-bold mb-1">Inscription</h2>
-              <p class="text-muted mb-0">
-                Rejoignez la communauté Collector.shop
-              </p>
+              <p class="text-muted mb-0">Rejoignez la communauté Collector.shop</p>
             </div>
 
             <form @submit.prevent="handleRegister" novalidate>
@@ -128,13 +122,12 @@ const handleRegister = async () => {
 
               <!-- Buttons -->
               <div class="d-grid gap-2">
-                <button
-                  type="submit"
-                  class="btn btn-primary btn-lg"
-                  :disabled="userStore.loading"
-                >
-                  <span v-if="userStore.loading" class="spinner-border spinner-border-sm me-2"></span>
-                  {{ userStore.loading ? 'Inscription...' : 'S\'inscrire' }}
+                <button type="submit" class="btn btn-primary btn-lg" :disabled="userStore.loading">
+                  <span
+                    v-if="userStore.loading"
+                    class="spinner-border spinner-border-sm me-2"
+                  ></span>
+                  {{ userStore.loading ? 'Inscription...' : "S'inscrire" }}
                 </button>
                 <button
                   type="button"

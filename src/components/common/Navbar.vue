@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
-import { useUserStore } from '@/stores/user';
+import { computed, ref } from 'vue'
+import { useUserStore } from '@/stores/user'
 
-const user = ref<{ name: string; isLogged: boolean } | null>(null);
-const userStore = useUserStore();
-const isAuth = computed(() => userStore.isAuthenticated);
-const logout = () => userStore.logout();
-
+const user = ref<{ name: string; isLogged: boolean } | null>(null)
+const userStore = useUserStore()
+const isAuth = computed(() => userStore.isAuthenticated)
+const logout = () => userStore.logout()
 </script>
 
 <template>
@@ -19,10 +18,10 @@ const logout = () => userStore.logout();
       </router-link>
 
       <!-- Toggle mobile -->
-      <button 
-        class="navbar-toggler" 
-        type="button" 
-        data-bs-toggle="collapse" 
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
       >
         <span class="navbar-toggler-icon"></span>
@@ -45,9 +44,9 @@ const logout = () => userStore.logout();
         <!-- Recherche -->
         <form class="d-flex me-3">
           <div class="input-group input-group-sm">
-            <input 
-              class="form-control" 
-              type="search" 
+            <input
+              class="form-control"
+              type="search"
               placeholder="Rechercher un objet vintage..."
             />
             <button class="btn btn-outline-secondary">
@@ -70,33 +69,26 @@ const logout = () => userStore.logout();
               Panier (0)
             </a>
           </li>
-          
+
           <!-- Connecté -->
           <template v-if="isAuth">
             <li class="nav-item dropdown">
-              <a 
-                class="nav-link dropdown-toggle" 
-                href="#" 
-                role="button" 
-                data-bs-toggle="dropdown"
-              >
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                 {{ user?.name }}
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Mon profil</a></li>
                 <li><a class="dropdown-item" href="#">Mes ventes</a></li>
-                <li><hr class="dropdown-divider"></li>
+                <li><hr class="dropdown-divider" /></li>
                 <li><a class="dropdown-item" @click="logout">Déconnexion</a></li>
               </ul>
             </li>
           </template>
-          
+
           <!-- Non connecté -->
           <template v-else>
             <li class="nav-item">
-              <router-link class="nav-link" to="/login">
-                Connexion
-              </router-link>
+              <router-link class="nav-link" to="/login"> Connexion </router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link btn btn-outline-primary ms-2" to="/register">

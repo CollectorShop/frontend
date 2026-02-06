@@ -6,14 +6,13 @@ import ProductDetail from '@/views/ProductDetail.vue'
 import Register from '@/views/Register.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
-
 const routes = [
   { path: '/', name: 'Home', component: Home },
   { path: '/product/:id', name: 'ProductDetail', component: ProductDetail },
-    { path: '/login', name: 'Login', component: Login },
+  { path: '/login', name: 'Login', component: Login },
   { path: '/register', name: 'Register', component: Register },
   { path: '/video', name: 'Video', component: CompressVideo },
-  { path: '/:pathMatch(.*)*', redirect: '/' }
+  { path: '/:pathMatch(.*)*', redirect: '/' },
 ]
 
 const router = createRouter({
@@ -23,14 +22,14 @@ const router = createRouter({
 
 // Guard global auth
 router.beforeEach((to, from, next) => {
-  const userStore = useUserStore();
-  userStore.initAuth(); // Init à chaque navigation
-  
+  const userStore = useUserStore()
+  userStore.initAuth() // Init à chaque navigation
+
   if (to.meta.requiresAuth && !userStore.isAuthenticated) {
-    next('/login');
+    next('/login')
   } else {
-    next();
+    next()
   }
-});
+})
 
 export default router
